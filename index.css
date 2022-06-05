@@ -320,3 +320,13 @@ button:disabled {
 #btn-edit {
 	font-size: 2em;
 }
+#item-description {
+	font-size: 1.3em;
+	position: absolute;
+	top: -150px;
+	max-height: 180px;
+	width: 100%;
+	text-align: center;
+	opacity: 1;
+	overflow: auto;
+}

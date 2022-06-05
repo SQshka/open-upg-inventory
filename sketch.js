@@ -87,12 +87,14 @@ function wheelSketch(_p5) {
         // alignToRow();
 
         const background = document.querySelector('.image-grid');
+        const description = document.querySelector('#item-description');
 
         button = _p5.createButton('Roll');
         button.parent(document.querySelector('.content'));
         // button.position(width / 2, height);
         button.mousePressed(function () {
             if (!isCounterAnimation) {
+                description.style.opacity = 0;
                 const luck = Math.floor((Math.random() * 20) + 1);
                 let rolled = false
                 const duration = 22000,
@@ -137,6 +139,7 @@ function wheelSketch(_p5) {
                                     alignToRow();
                                     // background.style.display = null;
                                     background.classList = 'image-grid';
+                                    description.style.opacity = 1;
                                 },
                                 easeInOutSine
                             );
@@ -153,6 +156,7 @@ function wheelSketch(_p5) {
                                         alignToRow();
                                         // background.style.display = null;
                                         background.classList = 'image-grid';
+                                        description.style.opacity = 1;
                                     },
                                     easeInOutSine
                                 );
@@ -162,6 +166,7 @@ function wheelSketch(_p5) {
                             alignToRow();
                             // background.style.display = null;
                             background.classList = 'image-grid';
+                            description.style.opacity = 1;
                         }
                     },
                     easeInOutSine
