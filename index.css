@@ -323,10 +323,12 @@ button:disabled {
 #item-description {
 	font-size: 1.3em;
 	position: absolute;
-	top: -150px;
-	max-height: 180px;
+	top: 100px;
+	left: -500px;
+	max-height: 280px;
 	width: 100%;
 	text-align: center;
 	opacity: 1;
+	inline-size: 500px;
 	overflow: auto;
 }
