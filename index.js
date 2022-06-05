@@ -471,10 +471,12 @@ customButton.addEventListener('click', function () {
 closeDesc.addEventListener('click', function () {
     descriptionContainer.style.display = 'none';
     openDesc.style.display = 'block';
+    p5Instance.mouseDragEnable(true);
 });
 openDesc.addEventListener('click', function () {
     descriptionContainer.style.display = 'flex';
     openDesc.style.display = 'none';
+    p5Instance.mouseDragEnable(false);
 });
 
 let radios = document.querySelectorAll('[name="list"]');
