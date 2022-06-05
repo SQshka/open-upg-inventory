@@ -87,14 +87,16 @@ function wheelSketch(_p5) {
         // alignToRow();
 
         const background = document.querySelector('.image-grid');
-        const description = document.querySelector('#item-description');
+        const descriptionContainer = document.querySelector('#item-description-container');
+        const openDesc = document.querySelector('#item-description-open')
 
         button = _p5.createButton('Roll');
         button.parent(document.querySelector('.content'));
         // button.position(width / 2, height);
         button.mousePressed(function () {
             if (!isCounterAnimation) {
-                description.style.opacity = 0;
+                descriptionContainer.style.display = 'none';
+                openDesc.style.display = 'none';
                 const luck = Math.floor((Math.random() * 20) + 1);
                 let rolled = false
                 const duration = 22000,
@@ -139,7 +141,7 @@ function wheelSketch(_p5) {
                                     alignToRow();
                                     // background.style.display = null;
                                     background.classList = 'image-grid';
-                                    description.style.opacity = 1;
+                                    openDesc.style.display = 'block';
                                 },
                                 easeInOutSine
                             );
@@ -156,7 +158,7 @@ function wheelSketch(_p5) {
                                         alignToRow();
                                         // background.style.display = null;
                                         background.classList = 'image-grid';
-                                        description.style.opacity = 1;
+                                        openDesc.style.display = 'block';
                                     },
                                     easeInOutSine
                                 );
@@ -166,7 +168,7 @@ function wheelSketch(_p5) {
                             alignToRow();
                             // background.style.display = null;
                             background.classList = 'image-grid';
-                            description.style.opacity = 1;
+                            openDesc.style.display = 'block';
                         }
                     },
                     easeInOutSine
