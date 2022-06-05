@@ -350,6 +350,7 @@ button:disabled {
 	font-size: 1.2em;
 	padding: 0px 10px 10px;
 	overflow: auto;
+	pointer-events: all;
 }
 #item-description-close {
 	position: absolute;
