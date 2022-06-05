@@ -435,14 +435,18 @@ p5Instance.onAfterSetup = function () {
 };
 
 const image = document.querySelector('#item-image img');
-const description = document.querySelector('#item-description');
+const descriptionName = document.querySelector('#item-description-name');
+const descriptionText = document.querySelector('#item-description-text');
 p5Instance.onSelectItem = function(data, selectedKey) {
     if (dataSets[currentDataSet]) {
         image.src = getImageURI(dataSets[currentDataSet].indexOf(data[selectedKey]));
 
         if(dataSets[`${currentDataSet}Desc`]?.length > 0 && dataSets[`${currentDataSet}Desc`]?.length !== dataSets[currentDataSet]?.length) console.error(`Количество элементов описания не соответствует количеству элементов названий, нужно проверить количество строк в ${currentDataSet} и ${currentDataSet}Desc и сделать их равными`)
-        if(dataSets[`${currentDataSet}Desc`]?.length > 0 && dataSets[`${currentDataSet}Desc`]?.length === dataSets[currentDataSet]?.length) description.textContent = dataSets[`${currentDataSet}Desc`][dataSets[currentDataSet].indexOf(data[selectedKey])];
-        else description.textContent = ""
+        if(dataSets[`${currentDataSet}Desc`]?.length > 0 && dataSets[`${currentDataSet}Desc`]?.length === dataSets[currentDataSet]?.length) {
+            descriptionName.textContent = dataSets[currentDataSet][dataSets[currentDataSet].indexOf(data[selectedKey])];
+            descriptionText.textContent = dataSets[`${currentDataSet}Desc`][dataSets[currentDataSet].indexOf(data[selectedKey])];
+        }
+        else descriptionName.textContent = ""
     }
     else {
         image.src = '../hpg-inventory/images/000.png';
@@ -451,7 +455,10 @@ p5Instance.onSelectItem = function(data, selectedKey) {
 
 const customDialog = document.getElementById('custom-list'),
     customTextarea = customDialog.getElementsByTagName('textarea')[0],
-    customButton = customDialog.getElementsByTagName('button')[0]
+    customButton = customDialog.getElementsByTagName('button')[0],
+    closeDesc = document.querySelector("#item-description-close"),
+    descriptionContainer = document.querySelector('#item-description-container'),
+    openDesc = document.querySelector('#item-description-open')
 ;
 
 customButton.addEventListener('click', function () {
@@ -459,6 +466,15 @@ customButton.addEventListener('click', function () {
 
     p5Instance.setData(customTextarea.value.split('\n'));
     p5Instance.mouseDragEnable();
+});
+
+closeDesc.addEventListener('click', function () {
+    descriptionContainer.style.display = 'none';
+    openDesc.style.display = 'block';
+});
+openDesc.addEventListener('click', function () {
+    descriptionContainer.style.display = 'flex';
+    openDesc.style.display = 'none';
 });
 
 let radios = document.querySelectorAll('[name="list"]');
