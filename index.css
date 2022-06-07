@@ -218,7 +218,7 @@ button:disabled {
 	left: 50%;
 	top: 50%;
 	margin: -25%;
-	min-width: 2520px;
+	min-width: 250px;
 	background-color: #272167;
 	padding: 10px;
 	border-radius: .25rem;
