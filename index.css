@@ -218,7 +218,7 @@ button:disabled {
 	left: 50%;
 	top: 50%;
 	margin: -25%;
-	min-width: 250px;
+	min-width: 2520px;
 	background-color: #272167;
 	padding: 10px;
 	border-radius: .25rem;
@@ -322,12 +322,6 @@ button:disabled {
 }
 #item-description-container {
 	position: absolute;
-<<<<<<< HEAD
-	top: 100px;
-	left: -500px;
-	max-height: 280px;
-	width: 100%;
-=======
 	top: 0px;
 	left: 0px;
 	right: 0px;
@@ -341,10 +335,9 @@ button:disabled {
 	position: relative;
 	max-width: 100%;
 	max-height: 100%;
->>>>>>> 82057fa32441d9c5bca255c374e0753c0c621905
 	text-align: center;
 	opacity: 1;
-	inline-size: 500px;
+	inline-size: 550px;
 	overflow: auto;
 	background: #181439;
 	border: 1px #eee solid;
@@ -352,11 +345,15 @@ button:disabled {
 }
 #item-description-name {
 	font-size: 1.7em;
-	padding: 10px 40px;
+	padding: 0px 40px;
+}
+#item-description-tip {
+	font-size: 1.0em;
+	padding: 0px 40px;
 }
 #item-description-text {
 	font-size: 1.2em;
-	padding: 0px 10px 10px;
+	padding: 10px 10px 10px;
 	overflow: auto;
 	pointer-events: all;
 }
@@ -381,7 +378,7 @@ button:disabled {
 	content: '';
 	width: 100%;
 	height: 2px;
-	background-color: #fff;
+	background-color: rgb(255, 197, 197);
 }
 #item-description-close::before {
 	transform: rotate(45deg);
@@ -391,7 +388,7 @@ button:disabled {
 }
 #item-description-open {
 	position: absolute;
-	left: 1px;
+	left: -2px;
 	bottom: 115px;
 	padding: 5px;
 }

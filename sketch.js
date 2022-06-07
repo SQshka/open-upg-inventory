@@ -339,7 +339,7 @@ function wheelSketch(_p5) {
         if (counterDelta > 0) {
             if (counter < counterMax) {
                 if (!isCounterAnimation) {
-                    incrementCounter(3);
+                    incrementCounter(0);
                 }
             }
             else {
