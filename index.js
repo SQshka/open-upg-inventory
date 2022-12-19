@@ -132,6 +132,7 @@ const dataSets = {
         '(Эффект)',
         '(Эффект)',
     ],
+    //Предметы(баффы)
     effects: [
         'Читерский кубик',
         'Очки EZ',
@@ -225,14 +226,8 @@ const dataSets = {
         'Ну типа орешка еда такая',
         'Шанс ребра практически равен нулю... вам очень повезло(или нет).',
     ],
-    streamers: [
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-    ],
+
+    //Предметы(дебаффы)
     debuffs: [
         'Два по цене одного',
         'Повязка Рэмбо',
@@ -282,6 +277,11 @@ let currentDataSet = 'inventory',
 
 const editDialog = document.getElementById('dialog-edit'),
     editButton = document.getElementById('btn-edit'),
+    mainbutton = document.getElementById('huey'),
+    buffsbutton = document.getElementById('dewey'),
+    debuffsbutton = document.getElementById('scrudge'),
+    coinbutton = document.getElementById('louie'),
+    customlistbutton = document.getElementById('scrooge'),
     editConfirmButton = editDialog.getElementsByClassName('apply')[0],
     editOptions = editDialog.getElementsByClassName('options')[0],
     editPresets = editDialog.getElementsByClassName('presets')[0],
@@ -312,6 +312,7 @@ const editDialog = document.getElementById('dialog-edit'),
     }
 ;
 
+//buffsbutton.setAttribute('disabled', 'disabled')
 editButton.addEventListener('click', function () {
     if (currentDataSet === 'custom') {
         p5Instance.mouseDragEnable(false);
@@ -330,7 +331,6 @@ editButton.addEventListener('click', function () {
 editConfirmButton.addEventListener('click', function () {
     editDialog.style.display = 'none';
     p5Instance.mouseDragEnable();
-
     p5Instance.setData(editedDataToArray());
 });
 
@@ -376,6 +376,7 @@ class PresetAll extends Preset {
     }
 }
 
+//Список эффектов(не предметов, при нажатии на "только предметы", снимает с них галочку)
 class PresetWithoutSpecialRolls extends Preset {
     constructor() {
         super(
@@ -426,9 +427,7 @@ class Presets {
                 new PresetAll(),
                 new PresetWithoutSpecialRolls(true),
             ],
-            streamers: [
-                new PresetAll(),
-            ],
+
         };
     }
 
@@ -500,9 +499,7 @@ function getImageURI(index) {
             }
             break;
 
-        case "streamers":
-            result = '../images/streamers/'+ dataSets[currentDataSet][index] +'.png';
-            break;
+
     }
 
     return result;
