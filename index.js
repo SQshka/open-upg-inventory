@@ -311,7 +311,6 @@ const editDialog = document.getElementById('dialog-edit'),
         return result;
     }
 ;
-[mainbutton, buffsbutton, debuffsbutton, coinbutton].forEach(btn => btn.addEventListener("change", () => openDesc.style.display = 'block'))
 
 
 //buffsbutton.setAttribute('disabled', 'disabled')
@@ -590,12 +589,24 @@ const customDialog = document.getElementById('custom-list'),
     customButton = customDialog.getElementsByTagName('button')[0],
     closeDesc = document.querySelector("#item-description-close"),
     descriptionContainer = document.querySelector('#item-description-container'),
-    openDesc = document.querySelector('#item-description-open')
+    openDesc = document.querySelector('#item-description-open'),
+    closeCustom = document.getElementById('custom-list-close');
 ;
+
+closeCustom.addEventListener('click', () => {
+    openDesc.style.display = 'none';
+    customDialog.style.display = 'none';
+    openDesc.style.display = 'block';
+    p5Instance.mouseDragEnable();
+});
+
+let customValue = null;
 
 customButton.addEventListener('click', function () {
     openDesc.style.display = 'none';
     customDialog.style.display = 'none';
+    currentDataSet = customValue;
+    customlistbutton.checked = true;
 
     p5Instance.setData(customTextarea.value.split('\n'));
     p5Instance.mouseDragEnable();
@@ -614,15 +625,17 @@ openDesc.addEventListener('click', function () {
 
 let radios = document.querySelectorAll('[name="list"]');
 for(let i = 0; i < radios.length; i++) {
-    radios[i].addEventListener('click', function () {
-        currentDataSet = this.value;
-
+    radios[i].addEventListener('click', function (e) {
+        
         if (this.value === 'custom') {
+            e.preventDefault();
             p5Instance.mouseDragEnable(false);
             customDialog.style.display = 'block';
-
+            customValue = this.value;
             return;
         }
+        currentDataSet = this.value;
+        openDesc.style.display = 'block';
 
         customDialog.style.display = 'none';
         p5Instance.mouseDragEnable();
