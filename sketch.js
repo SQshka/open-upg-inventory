@@ -87,9 +87,7 @@ function wheelSketch(_p5) {
         // alignToRow();
 
         const background = document.querySelector('.image-grid');
-        const descriptionContainer = document.querySelector('#item-description-container');
-        const openDesc = document.querySelector('#item-description-open')
-
+        
         button = _p5.createButton('Roll');
         button.parent(document.querySelector('.content'));
         // button.position(width / 2, height);
@@ -97,6 +95,12 @@ function wheelSketch(_p5) {
             if (!isCounterAnimation) {
                 descriptionContainer.style.display = 'none';
                 openDesc.style.display = 'none';
+                editButton.setAttribute('disabled', 'disabled')
+                mainbutton.setAttribute('disabled', 'disabled')
+                buffsbutton.setAttribute('disabled', 'disabled')
+                debuffsbutton.setAttribute('disabled', 'disabled')
+                coinbutton.setAttribute('disabled', 'disabled')
+                customlistbutton.setAttribute('disabled', 'disabled')
                 const luck = Math.floor((Math.random() * 20) + 1);
                 let rolled = false
                 const duration = 22000,
@@ -142,6 +146,12 @@ function wheelSketch(_p5) {
                                     // background.style.display = null;
                                     background.classList = 'image-grid';
                                     openDesc.style.display = 'block';
+                                    editButton.removeAttribute('disabled', 'disabled')
+                                    mainbutton.removeAttribute('disabled')
+                                    buffsbutton.removeAttribute('disabled')
+                                    debuffsbutton.removeAttribute('disabled')
+                                    coinbutton.removeAttribute('disabled')
+                                    customlistbutton.removeAttribute('disabled')
                                 },
                                 easeInOutSine
                             );
@@ -159,6 +169,14 @@ function wheelSketch(_p5) {
                                         // background.style.display = null;
                                         background.classList = 'image-grid';
                                         openDesc.style.display = 'block';
+                                        background.classList = 'image-grid';
+                                        openDesc.style.display = 'block';
+                                        editButton.removeAttribute('disabled', 'disabled')
+                                        mainbutton.removeAttribute('disabled')
+                                        buffsbutton.removeAttribute('disabled')
+                                        debuffsbutton.removeAttribute('disabled')
+                                        coinbutton.removeAttribute('disabled')
+                                        customlistbutton.removeAttribute('disabled')
                                     },
                                     easeInOutSine
                                 );
@@ -169,6 +187,14 @@ function wheelSketch(_p5) {
                             // background.style.display = null;
                             background.classList = 'image-grid';
                             openDesc.style.display = 'block';
+                            background.classList = 'image-grid';
+                            openDesc.style.display = 'block';
+                            editButton.removeAttribute('disabled', 'disabled')
+                            mainbutton.removeAttribute('disabled')
+                            buffsbutton.removeAttribute('disabled')
+                            debuffsbutton.removeAttribute('disabled')
+                            coinbutton.removeAttribute('disabled')
+                            customlistbutton.removeAttribute('disabled')
                         }
                     },
                     easeInOutSine

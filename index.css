@@ -34,6 +34,8 @@ a:hover {
 #canvas {
 	position: relative;
 	font-size: 0;
+	right: 20%;
+	
 }
 #video {
 	position: absolute;
@@ -299,6 +301,8 @@ button:disabled {
 */
 #item-image {
 	position: absolute;
+	right: 80%;
+	bottom: 5%;
 	width: 40%;
 	height: 100%;
 	display: flex;
@@ -311,6 +315,8 @@ button:disabled {
 	background: url(arc3.png) no-repeat 60px center;
 	height: 100%;
 	width: 200px;
+	top: 5%;
+	right: 30%;
 }
 #item-image img {
 	width: 90px;
@@ -388,7 +394,6 @@ button:disabled {
 }
 #item-description-open {
 	position: absolute;
-	left: -2px;
 	bottom: 115px;
-	padding: 5px;
+	padding: 4px;
 }
