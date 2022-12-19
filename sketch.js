@@ -145,7 +145,8 @@ function wheelSketch(_p5) {
                                     alignToRow();
                                     // background.style.display = null;
                                     background.classList = 'image-grid';
-                                    openDesc.style.display = 'block';
+                                    if (!document.getElementById('scrooge').checked)
+                                        openDesc.style.display = 'block';
                                     editButton.removeAttribute('disabled', 'disabled')
                                     mainbutton.removeAttribute('disabled')
                                     buffsbutton.removeAttribute('disabled')
@@ -168,9 +169,9 @@ function wheelSketch(_p5) {
                                         alignToRow();
                                         // background.style.display = null;
                                         background.classList = 'image-grid';
-                                        openDesc.style.display = 'block';
-                                        background.classList = 'image-grid';
-                                        openDesc.style.display = 'block';
+                                        if (!document.getElementById('scrooge').checked)
+                                            openDesc.style.display = 'block';
+                                        console.log(document.getElementById('scrooge').checked)
                                         editButton.removeAttribute('disabled', 'disabled')
                                         mainbutton.removeAttribute('disabled')
                                         buffsbutton.removeAttribute('disabled')
@@ -186,9 +187,8 @@ function wheelSketch(_p5) {
                             alignToRow();
                             // background.style.display = null;
                             background.classList = 'image-grid';
-                            openDesc.style.display = 'block';
-                            background.classList = 'image-grid';
-                            openDesc.style.display = 'block';
+                            if (!document.getElementById('scrooge').checked)
+                                openDesc.style.display = 'block';
                             editButton.removeAttribute('disabled', 'disabled')
                             mainbutton.removeAttribute('disabled')
                             buffsbutton.removeAttribute('disabled')

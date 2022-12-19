@@ -311,6 +311,8 @@ const editDialog = document.getElementById('dialog-edit'),
         return result;
     }
 ;
+[mainbutton, buffsbutton, debuffsbutton, coinbutton].forEach(btn => btn.addEventListener("change", () => openDesc.style.display = 'block'))
+
 
 //buffsbutton.setAttribute('disabled', 'disabled')
 editButton.addEventListener('click', function () {
@@ -592,6 +594,7 @@ const customDialog = document.getElementById('custom-list'),
 ;
 
 customButton.addEventListener('click', function () {
+    openDesc.style.display = 'none';
     customDialog.style.display = 'none';
 
     p5Instance.setData(customTextarea.value.split('\n'));
