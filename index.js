@@ -626,7 +626,7 @@ openDesc.addEventListener('click', function () {
 let radios = document.querySelectorAll('[name="list"]');
 for(let i = 0; i < radios.length; i++) {
     radios[i].addEventListener('click', function (e) {
-        
+        descriptionContainer.style.display = 'none';
         if (this.value === 'custom') {
             e.preventDefault();
             p5Instance.mouseDragEnable(false);
