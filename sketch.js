@@ -134,6 +134,7 @@ function wheelSketch(_p5) {
                     () => {
                         if(luck < 4 && !rolled) {
                             rolled = true
+                            playAudio();
                             animate(
                                 tickCounter,
                                 firstAnimEndPos,
@@ -153,11 +154,14 @@ function wheelSketch(_p5) {
                                     debuffsbutton.removeAttribute('disabled')
                                     coinbutton.removeAttribute('disabled')
                                     customlistbutton.removeAttribute('disabled')
+                                    // Убрать комментирование если нужно чтобы звук выключался в конце докрутки
+                                    // removeAudio();
                                 },
                                 easeInOutSine
                             );
                             } else if(luck === 20 && !rolled) {
                                 rolled = true
+                                playAudio();
                                 animate(
                                     tickCounter,
                                     firstAnimEndPos,
@@ -178,6 +182,8 @@ function wheelSketch(_p5) {
                                         debuffsbutton.removeAttribute('disabled')
                                         coinbutton.removeAttribute('disabled')
                                         customlistbutton.removeAttribute('disabled')
+                                        // Убрать комментирование если нужно чтобы звук выключался в конце докрутки
+                                        // removeAudio();
                                     },
                                     easeInOutSine
                                 );

@@ -337,6 +337,18 @@ button:disabled {
 	align-items: center;
 	pointer-events: none;
 }
+
+@keyframes descAppear {
+	0% {
+		transform: scale(0) translateX(-500px);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1) translateX(0px);
+		opacity: 1;
+	}
+}
+
 #item-description {
 	position: relative;
 	max-width: 100%;
@@ -348,6 +360,8 @@ button:disabled {
 	background: #181439;
 	border: 1px #eee solid;
 	border-radius: 10px;
+	animation: 0.2s linear descAppear;
+	transform-origin: left;
 }
 #item-description-name {
 	font-size: 1.7em;
