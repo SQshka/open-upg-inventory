@@ -88,41 +88,44 @@
         </div>
 
         <div id="wheel-data-sets">
-            <li class="volume"><img class="volume" src="../volume.png" alt=""></li>
-            <input id="volume-control" type="range" step="0.1" value="0.5" max="1" min="0" title="Громкость видео" />
             <div>
                 <input type="radio" id="huey" name="list" value="inventory" autocomplete="off" checked />
                 <label for="huey">Колесо Приколов</label>
             </div>
-
+            
             <div>
                 <input type="radio" id="dewey" name="list" value="effects" autocomplete="off" />
                 <label for="dewey">Позитивное колесо</label>
             </div>
-
+            
             <div>
                 <input type="radio" id="scrudge" name="list" value="debuffs" autocomplete="off" />
                 <label for="scrudge">Негативное колесо</label>
             </div>
-
+            
             <div>
                 <input type="radio" id="louie" name="list" value="coin" autocomplete="off" />
                 <label for="louie">Монетка</label>
             </div>
-
+            
             <div>
                 <input type="radio" id="scrooge" name="list" value="custom" autocomplete="off" />
                 <label for="scrooge">Свой список</label>
             </div>
-
-
+            
+            
             <div class="break"></div>
-
-            <button id="btn-edit" title="Редактировать список"></button>
-
             <a id="sources"
-               title="Посмотреть репозиторий на Гитхабе"
-               href="https://github.com/SQshka/open-upg-inventory" target="_blank"></a>
+            title="Посмотреть репозиторий на Гитхабе"
+            href="https://github.com/SQshka/open-upg-inventory" target="_blank"></a>
+            <div class="volume-container">
+                
+                <img class="volume" src="../volume.png" alt="">
+                <input id="volume-control" type="range" step="0.1" value="0.5" max="1" min="0" title="Громкость видео" />
+            </div>
+            
+            
+            <button id="btn-edit" title="Редактировать список"></button>
         </div>
 
         <div id="item-description-container">

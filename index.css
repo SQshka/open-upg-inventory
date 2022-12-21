@@ -69,7 +69,6 @@ a:hover {
 }
 
 button, input, optgroup, select, textarea {
-	margin: 14px 4px 0px;
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
@@ -213,16 +212,20 @@ button:disabled {
 	flex-wrap: wrap;
 	width: 100%;
 	justify-content: space-between;
+	align-items: flex-start;
 	user-select: none;
 	/*opacity: 0.6;*/
 	/*transition: opacity 0.3s;*/
 }
+#wheel-data-sets .volume-container {
+	display: flex;
+	align-items: flex-start;
+}
 #wheel-data-sets .volume {
-	position: absolute;
-	color:rgba(25, 21, 58, 0.70);
-	width: 25%;
-	bottom: 32%;
-	right:	80%;
+	height: 40px;
+	width: 40px;
+	position: relative;
+	top: -8px;
 }
 #wheel-data-sets:hover {
 	/*opacity: 1;*/
@@ -250,6 +253,7 @@ button:disabled {
 .dialog textarea {
 	background-color: #151235;
 	color: #eee;
+	margin-top: 10px;
 }
 .dialog .options {
 	max-height: 300px;
@@ -425,5 +429,6 @@ button:disabled {
 #item-description-open {
 	position: absolute;
 	bottom: 115px;
+	left: 6px;
 	padding: 4px;
 }
