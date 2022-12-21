@@ -176,7 +176,6 @@ function wheelSketch(_p5) {
                                         if (!document.getElementById('scrooge').checked)
                                             openDesc.style.display = 'block';
                                         console.log(document.getElementById('scrooge').checked)
-                                        editButton.removeAttribute('disabled', 'disabled')
                                         mainbutton.removeAttribute('disabled')
                                         buffsbutton.removeAttribute('disabled')
                                         debuffsbutton.removeAttribute('disabled')
@@ -195,7 +194,6 @@ function wheelSketch(_p5) {
                             background.classList = 'image-grid';
                             if (!document.getElementById('scrooge').checked)
                                 openDesc.style.display = 'block';
-                            editButton.removeAttribute('disabled', 'disabled')
                             mainbutton.removeAttribute('disabled')
                             buffsbutton.removeAttribute('disabled')
                             debuffsbutton.removeAttribute('disabled')
