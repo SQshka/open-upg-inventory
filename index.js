@@ -741,6 +741,7 @@ customButton.addEventListener('click', function () {
 
     p5Instance.setData(customTextarea.value.split('\n'));
     p5Instance.mouseDragEnable();
+    editButton.removeAttribute('disabled');
 });
 
 closeDesc.addEventListener('click', function () {
@@ -755,6 +756,7 @@ openDesc.addEventListener('click', function () {
 });
 
 let radios = document.querySelectorAll('[name="list"]');
+let choseUneditableDataset = false;
 for(let i = 0; i < radios.length; i++) {
     radios[i].addEventListener('click', function (e) {
         descriptionContainer.style.display = 'none';
@@ -763,6 +765,8 @@ for(let i = 0; i < radios.length; i++) {
             p5Instance.mouseDragEnable(false);
             customDialog.style.display = 'block';
             customValue = this.value;
+            editButton.removeAttribute('disabled');
+            choseUneditableDataset = false;
             return;
         }
         currentDataSet = this.value;
@@ -776,13 +780,15 @@ for(let i = 0; i < radios.length; i++) {
                 resetEditedDataSet();
                 presets.applyDefaults(currentDataSet);
             }
-
+            
             p5Instance.setData(editedDataToArray());
             editButton.removeAttribute('disabled');
+            choseUneditableDataset = false;
         }
         else {
             p5Instance.setData(dataSets[currentDataSet]);
             editButton.setAttribute('disabled', 'disabled');
+            choseUneditableDataset = true;
         }
     });
 
