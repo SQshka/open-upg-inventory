@@ -582,6 +582,7 @@ p5Instance.onAfterSetup = function () {
         'videos/[Re-upload] [1080p] HONK HONK.mp4',
         'videos/01.mp4',
         'videos/02.mp4',
+        ['videos/03.mp4', 120],
         'videos/04.mp4',
         'videos/05.mp4',
         'videos/06.mp4',
