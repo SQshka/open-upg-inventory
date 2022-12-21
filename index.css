@@ -208,6 +208,13 @@ button:disabled {
 	/*opacity: 0.6;*/
 	/*transition: opacity 0.3s;*/
 }
+#wheel-data-sets .volume {
+	position: absolute;
+	color:rgba(25, 21, 58, 0.70);
+	width: 25%;
+	bottom: 32%;
+	right:	80%;
+}
 #wheel-data-sets:hover {
 	/*opacity: 1;*/
 }
