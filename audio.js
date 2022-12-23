@@ -1,7 +1,10 @@
 const audioFiles = [
     'Im a Gnome meme sound effect woo.m4a',
     'casino.mp3',
-    'alert.mp3'
+    'alert.mp3',
+    'duck-quack-sound-effect-hd.mp3',
+    'minecraft-damage-oof-sound-effect-hd.mp3',
+    'roblox-death-sound-sound-effect-hd.mp3',
 ];
 
 const audio = document.getElementById('random-sound-effect');
