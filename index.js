@@ -403,6 +403,7 @@ const editDialog = document.getElementById('dialog-edit'),
     mainbutton = document.getElementById('huey'),
     buffsbutton = document.getElementById('dewey'),
     debuffsbutton = document.getElementById('scrudge'),
+    streamersbutton = document.getElementById('webby')
     coinbutton = document.getElementById('louie'),
     customlistbutton = document.getElementById('scrooge'),
     editConfirmButton = editDialog.getElementsByClassName('apply')[0],

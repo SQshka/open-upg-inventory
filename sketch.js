@@ -99,6 +99,7 @@ function wheelSketch(_p5) {
                 mainbutton.setAttribute('disabled', 'disabled')
                 buffsbutton.setAttribute('disabled', 'disabled')
                 debuffsbutton.setAttribute('disabled', 'disabled')
+                streamersbutton.setAttribute('disabled', 'disabled')
                 coinbutton.setAttribute('disabled', 'disabled')
                 customlistbutton.setAttribute('disabled', 'disabled')
                 const luck = Math.floor((Math.random() * 20) + 1);
@@ -153,6 +154,7 @@ function wheelSketch(_p5) {
                                     mainbutton.removeAttribute('disabled')
                                     buffsbutton.removeAttribute('disabled')
                                     debuffsbutton.removeAttribute('disabled')
+                                    streamersbutton.removeAttribute('disabled')
                                     coinbutton.removeAttribute('disabled')
                                     customlistbutton.removeAttribute('disabled')
                                     // Убрать комментирование если нужно чтобы звук выключался в конце докрутки
@@ -181,6 +183,7 @@ function wheelSketch(_p5) {
                                         mainbutton.removeAttribute('disabled')
                                         buffsbutton.removeAttribute('disabled')
                                         debuffsbutton.removeAttribute('disabled')
+                                        streamersbutton.removeAttribute('disabled')
                                         coinbutton.removeAttribute('disabled')
                                         customlistbutton.removeAttribute('disabled')
                                         // Убрать комментирование если нужно чтобы звук выключался в конце докрутки
@@ -201,6 +204,7 @@ function wheelSketch(_p5) {
                             mainbutton.removeAttribute('disabled')
                             buffsbutton.removeAttribute('disabled')
                             debuffsbutton.removeAttribute('disabled')
+                            streamersbutton.removeAttribute('disabled')
                             coinbutton.removeAttribute('disabled')
                             customlistbutton.removeAttribute('disabled')
                         }
