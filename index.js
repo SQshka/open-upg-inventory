@@ -778,6 +778,26 @@ let choseUneditableDataset = false;
 for(let i = 0; i < radios.length; i++) {
     radios[i].addEventListener('click', function (e) {
         descriptionContainer.style.display = 'none';
+        switch (this.value) {
+            case "inventory":
+                editButton.style.marginLeft = "0px";
+                break;
+            case "effects":
+                editButton.style.marginLeft = "155px";
+                break;
+            case "debuffs":
+                editButton.style.marginLeft = "322px";
+                break;
+            case "streamers":
+                editButton.style.marginLeft = "489px";
+                break;
+            case "coin":
+                editButton.style.marginLeft = "595px";
+                break;
+            case "custom":
+                editButton.style.marginLeft = "690px";
+                break;
+        }
         if (this.value === 'custom') {
             e.preventDefault();
             p5Instance.mouseDragEnable(false);
@@ -787,8 +807,10 @@ for(let i = 0; i < radios.length; i++) {
             choseUneditableDataset = false;
             return;
         }
+        if (this.value === "streamers")
+            openDesc.style.display = 'none';
+        else openDesc.style.display = 'block';
         currentDataSet = this.value;
-        openDesc.style.display = 'block';
 
         customDialog.style.display = 'none';
         p5Instance.mouseDragEnable();
