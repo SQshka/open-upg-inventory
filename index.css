@@ -64,8 +64,8 @@ a:hover {
 	/*box-shadow: 0 0 30px #19153a;*/
 }
 #volume-control {
-	/*position: absolute;*/
-	/*bottom: -20px;*/
+	position: relative;
+	left: 170%;
 }
 
 button, input, optgroup, select, textarea {
@@ -226,6 +226,7 @@ button:disabled {
 	width: 40px;
 	position: relative;
 	top: -8px;
+	left: 165%;
 }
 #wheel-data-sets:hover {
 	/*opacity: 1;*/
