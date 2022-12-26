@@ -617,7 +617,7 @@ function getImageURI(index) {
                 37,
                 40,
                 41,
-                42,
+                42
             ]
             result = '../hpg-inventory/images/0' + ('0' + (effectsmapping[index])).slice(-2) + '.png';
             break;
@@ -684,7 +684,7 @@ p5Instance.onAfterSetup = function () {
         'videos/21.mp4',
         'videos/22.mp4',
         'videos/23.mp4',
-        ['videos/24.mp4', 6],
+        'videos/24.mp4',
         'videos/25.mp4',
         ['videos/26.mp4', 5],
         ['videos/27.mp4'],
