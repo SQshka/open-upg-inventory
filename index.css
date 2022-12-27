@@ -443,7 +443,7 @@ button:disabled {
 	list-style: none;
 	display: inline;
 }
-.sets-label:hover {
+.sets-radio:not(:checked)+.sets-label:hover {
 	color: #FFF;
 	cursor: pointer;
 }
