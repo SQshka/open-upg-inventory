@@ -774,32 +774,22 @@ openDesc.addEventListener('click', function () {
 });
 
 let radios = document.querySelectorAll('[name="list"]');
+let sets = document.querySelectorAll('.sets');
 let choseUneditableDataset = false;
 for(let i = 0; i < radios.length; i++) {
     radios[i].addEventListener('click', function (e) {
         descriptionContainer.style.display = 'none';
         switch (this.value) {
             case "inventory":
+            case "streamers":
+            case "coin":
                 editButton.style.display = 'none';
                 break;
             case "effects":
-                editButton.style.display = 'block';
-                editButton.style.marginLeft = "155px";
-                break;
             case "debuffs":
-                editButton.style.display = 'block';
-                editButton.style.marginLeft = "322px";
-                break;
-            case "streamers":
-                editButton.style.display = 'none';
-                break;
-            case "coin":
-                editButton.style.display = 'none';
-                editButton.style.marginLeft = "595px";
-                break;
             case "custom":
                 editButton.style.display = 'block';
-                editButton.style.marginLeft = "690px";
+                editButton.style.marginLeft = sets[i].offsetLeft + (sets[i].clientWidth / 2) - 12 + "px";
                 break;
         }
         if (this.value === 'custom') {

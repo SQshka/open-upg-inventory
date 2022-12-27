@@ -432,3 +432,36 @@ button:disabled {
 	left: 6px;
 	padding: 4px;
 }
+.sets {
+	position: relative;
+}
+.sets-label {
+	padding: 5px 5px 2px;
+	transition: bottom 0.3s ease-out;
+	position: relative;
+	bottom: 0px;
+	list-style: none;
+	display: inline;
+}
+.sets-label:hover {
+	color: #FFF;
+}
+.sets-radio:checked+label {
+	color: #FFF;
+	bottom: 5px;
+}
+.sets-radio:checked+label:after {
+	width: calc(100% - 10px);
+	left: 5px;
+}
+.sets-label:after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -2px;
+	width: 0px;
+	height: 2px;
+	background: #FFF;
+	transition: all 0.3s;
+}
+
