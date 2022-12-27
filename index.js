@@ -756,10 +756,12 @@ customButton.addEventListener('click', function () {
     customDialog.style.display = 'none';
     currentDataSet = customValue;
     customlistbutton.checked = true;
-
+    
     p5Instance.setData(customTextarea.value.split('\n'));
     p5Instance.mouseDragEnable();
     editButton.removeAttribute('disabled');
+
+    editButton.style.display = 'block';
 });
 
 closeDesc.addEventListener('click', function () {
@@ -787,8 +789,11 @@ for(let i = 0; i < radios.length; i++) {
                 break;
             case "effects":
             case "debuffs":
-            case "custom":
                 editButton.style.display = 'block';
+                editButton.style.marginLeft = sets[i].offsetLeft + (sets[i].clientWidth / 2) - 12 + "px";
+                break;
+            case "custom":
+                editButton.style.display = 'none';
                 editButton.style.marginLeft = sets[i].offsetLeft + (sets[i].clientWidth / 2) - 12 + "px";
                 break;
         }
