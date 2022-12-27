@@ -445,6 +445,7 @@ button:disabled {
 }
 .sets-label:hover {
 	color: #FFF;
+	cursor: pointer;
 }
 .sets-radio:checked+label {
 	color: #FFF;
