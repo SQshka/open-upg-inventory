@@ -272,7 +272,8 @@ const dataSets = {
         'C_a_k_e',
         'Melharucos',
         'Lasqa',
-        'Krabick'
+        'Krabick',
+        'Guit88Man'
     ],
 
     effectsDesc: [
