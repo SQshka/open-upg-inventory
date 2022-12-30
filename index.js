@@ -637,6 +637,25 @@ function getImageURI(index) {
             result = '../hpg-inventory/images/0' + ('0' + (debuffsmapping[index])).slice(-2) + '.png';
             break;
 
+            case "streamers":
+                const streamersmapping = [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ];
+                result = '../streamers/0' + ('0'+(streamersmapping[index])).slice(-2) + '.png';
+                break;
+
         case "coin":
             result = '../images/coin-obverse-20.png';
             if (index === 1) {
