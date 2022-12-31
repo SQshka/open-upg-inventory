@@ -442,12 +442,12 @@ const editDialog = document.getElementById('dialog-edit'),
 editButton.addEventListener('click', function () {
     if (currentDataSet === 'custom') {
         p5Instance.mouseDragEnable(false);
-        customDialog.style.display = 'block';
+        customDialog.style.display = 'flex';
 
         return;
     }
 
-    editDialog.style.display = 'block';
+    editDialog.style.display = 'flex';
     p5Instance.mouseDragEnable(false);
 
     editPresets.innerHTML = '';
@@ -763,9 +763,7 @@ const customDialog = document.getElementById('custom-list'),
 ;
 
 closeCustom.addEventListener('click', () => {
-    openDesc.style.display = 'none';
     customDialog.style.display = 'none';
-    openDesc.style.display = 'block';
     p5Instance.mouseDragEnable();
 });
 
@@ -820,7 +818,7 @@ for(let i = 0; i < radios.length; i++) {
         if (this.value === 'custom') {
             e.preventDefault();
             p5Instance.mouseDragEnable(false);
-            customDialog.style.display = 'block';
+            customDialog.style.display = 'flex';
             customValue = this.value;
             editButton.removeAttribute('disabled');
             choseUneditableDataset = false;

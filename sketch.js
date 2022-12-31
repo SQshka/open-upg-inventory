@@ -146,8 +146,7 @@ function wheelSketch(_p5) {
                                     video.pause();
                                     alignToRow();
                                     // background.style.display = null;
-                                    background.classList = 'image-grid';
-                                    if (!document.getElementById('scrooge').checked)
+                                    if (!document.getElementById('scrooge').checked && !document.getElementById('webby').checked)
                                         openDesc.style.display = 'block';
                                     if (!choseUneditableDataset)
                                         editButton.removeAttribute('disabled', 'disabled')
@@ -176,7 +175,7 @@ function wheelSketch(_p5) {
                                         alignToRow();
                                         // background.style.display = null;
                                         background.classList = 'image-grid';
-                                        if (!document.getElementById('scrooge').checked)
+                                        if (!document.getElementById('scrooge').checked && !document.getElementById('webby').checked)
                                             openDesc.style.display = 'block';
                                         if (!choseUneditableDataset)
                                             editButton.removeAttribute('disabled', 'disabled')
@@ -197,7 +196,7 @@ function wheelSketch(_p5) {
                             alignToRow();
                             // background.style.display = null;
                             background.classList = 'image-grid';
-                            if (!document.getElementById('scrooge').checked)
+                            if (!document.getElementById('scrooge').checked && !document.getElementById('webby').checked)
                                 openDesc.style.display = 'block';
                             if (!choseUneditableDataset)
                                 editButton.removeAttribute('disabled', 'disabled')
