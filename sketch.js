@@ -107,7 +107,8 @@ function wheelSketch(_p5) {
                 const duration = 22000,
                     correction = data_key(data.length, 2 - selectedKey),
                     randomKey = Math.floor(_p5.random(data.length)),
-                    totalRows = (data.length * circlesCountForDataLength() + randomKey - correction)
+                    howManyRowsToRoll = (data.length * circlesCountForDataLength() + randomKey - correction),
+                    totalRows = howManyRowsToRoll > 40 ? howManyRowsToRoll : howManyRowsToRoll + 20
                 ;
                 video.play().catch(console.error);
                 decreaseVolume(duration);
