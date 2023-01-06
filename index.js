@@ -779,6 +779,8 @@ const customDialog = document.getElementById('custom-list'),
     closeCustom = document.getElementById('custom-list-close');
 ;
 
+let moveEditBtnToCustomBy = null;
+
 closeCustom.addEventListener('click', () => {
     customDialog.style.display = 'none';
     p5Instance.mouseDragEnable();
@@ -797,6 +799,7 @@ customButton.addEventListener('click', function () {
     editButton.removeAttribute('disabled');
 
     editButton.style.display = 'block';
+    editButton.style.marginLeft = moveEditBtnToCustomBy;
 });
 
 closeDesc.addEventListener('click', function () {
@@ -828,8 +831,7 @@ for(let i = 0; i < radios.length; i++) {
                 editButton.style.marginLeft = sets[i].offsetLeft + (sets[i].clientWidth / 2) - 12 + "px";
                 break;
             case "custom":
-                editButton.style.display = 'none';
-                editButton.style.marginLeft = sets[i].offsetLeft + (sets[i].clientWidth / 2) - 12 + "px";
+                moveEditBtnToCustomBy = sets[i].offsetLeft + (sets[i].clientWidth / 2) - 12 + "px";
                 break;
         }
         if (this.value === 'custom') {
