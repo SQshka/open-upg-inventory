@@ -1,5 +1,5 @@
 const audioFiles = [
-    'Im a Gnome meme sound effect woo.m4a',
+    'gnome.mp3',
     'casino.mp3',
     'alert.mp3',
     'duck-quack-sound-effect-hd.mp3',
