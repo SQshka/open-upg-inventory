@@ -514,7 +514,7 @@ class PresetAll extends Preset {
     }
 }
 
-//Список эффектов(не предметов, при нажатии на "только предметы", снимает с них галочку)
+//Список эффектов(не предметов), при нажатии на "только предметы", снимает с них галочку
 class PresetWithoutSpecialRolls extends Preset {
     constructor() {
         super(
@@ -570,6 +570,9 @@ class Presets {
                 new PresetAll(),
                 new PresetWithoutSpecialRolls(true),
             ],
+             streamers: [
+                new PresetAll(),
+             ],
 
         };
     }
@@ -748,6 +751,8 @@ p5Instance.onAfterSetup = function () {
         'videos/52.mp4',
         'videos/53.mp4',
         'videos/54.mp4',
+        'videos/55.mp4',
+        'videos/56.mp4',
     ]);
 };
 
@@ -823,15 +828,17 @@ for(let i = 0; i < radios.length; i++) {
         descriptionContainer.style.display = 'none';
         switch (this.value) {
             case "inventory":
-            case "streamers":
-            case "coin":
                 editButton.style.display = 'none';
-                break;
+                break;        
             case "effects":
             case "debuffs":
+            case "streamers":
                 editButton.style.display = 'block';
                 editButton.style.marginLeft = sets[i].offsetLeft + (sets[i].clientWidth / 2) - 12 + "px";
                 break;
+            case "coin":
+                editButton.style.display = 'none';
+                break;            
             case "custom":
                 moveEditBtnToCustomBy = sets[i].offsetLeft + (sets[i].clientWidth / 2) - 12 + "px";
                 break;
@@ -845,7 +852,8 @@ for(let i = 0; i < radios.length; i++) {
             choseUneditableDataset = false;
             return;
         }
-        if (this.value === "streamers")
+        
+        if (this.value === "streamers") 
             openDesc.style.display = 'none';
         else openDesc.style.display = 'block';
         currentDataSet = this.value;
