@@ -754,6 +754,7 @@ p5Instance.onAfterSetup = function () {
         'videos/55.mp4',
         'videos/56.mp4',
         'videos/57.mp4',
+        'videos/58.mp4',
     ]);
 };
 
